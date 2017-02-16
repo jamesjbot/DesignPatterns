@@ -10,27 +10,28 @@ import XCTest
 @testable import DesignPatterns
 
 class DesignPatternsTests: XCTestCase {
-    
+
+    var facade: Facade?
+
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        facade = Facade()
     }
     
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
+        facade = nil
     }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+
+    func testEncryptionFacade() {
+        // Given a simple message
+        let message = "hi"
+        // When we encrypt the message
+        let output = facade?.encrypt(string: message)
+        // Then the output will be
+        XCTAssert(output == "Hellohi", "Did not return the same\(output)")
     }
     
 }
