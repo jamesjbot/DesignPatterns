@@ -31,7 +31,7 @@ class DesignPatternsTests: XCTestCase {
         // When we encrypt the message
         let output = facade?.encrypt(string: message)
         // Then the output will be
-        XCTAssert(output == "Hellohi", "Did not return the same\(output)")
+        XCTAssert(output == "HelloHellohiWorld", "Did not return the same\(output)")
     }
     
 }

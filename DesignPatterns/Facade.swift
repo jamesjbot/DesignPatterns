@@ -26,7 +26,7 @@ class Facade: Encryptable {
 
 
     func encrypt(string: String) -> String {
-        return encryptUsing(systemA: string)
+        return encryptUsing(systemB: encryptUsing(systemA: string))
     }
 
     func encryptUsing(systemA string: String) -> String {
@@ -34,12 +34,12 @@ class Facade: Encryptable {
     }
 
 
-    func encryptUsing(B: String) -> String {
-        return B
+    func encryptUsing(systemB string: String) -> String {
+        return simpleSystemB.obfuscate(string: string)
     }
 
 
-    func encryptUsing(C: String) -> String {
-        return C
+    func encryptUsing(systemC string: String) -> String {
+        return string
     }
 }
