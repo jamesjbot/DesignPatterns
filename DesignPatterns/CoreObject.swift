@@ -32,7 +32,7 @@ class ObjectDecorator: CoreFunction {
 
     var originalObject: CoreFunction?
 
-    required init(object: CoreObject) {
+    required init(object: CoreFunction) {
         originalObject = object
     }
 
@@ -46,7 +46,7 @@ class AgeDecoration: ObjectDecorator {
 
     var age: String = "1"
 
-    required init(object: CoreObject) {
+    required init(object: CoreFunction) {
         super.init(object: object)
     }
 
@@ -59,7 +59,7 @@ class AgeDecoration: ObjectDecorator {
 class ColorDecoration: ObjectDecorator {
     var color: String = "Green"
 
-    required init(object: CoreObject) {
+    required init(object: CoreFunction) {
         super.init(object: object)
     }
 
