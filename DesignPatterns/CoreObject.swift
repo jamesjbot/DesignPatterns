@@ -24,6 +24,49 @@ class CoreObject: CoreFunction {
     }
 
     func tellMeAboutYourSelf() -> String {
-        return ""
+        return name!
     }
 }
+
+class ObjectDecorator: CoreFunction {
+
+    var originalObject: CoreFunction?
+
+    required init(object: CoreObject) {
+        originalObject = object
+    }
+
+    func tellMeAboutYourSelf() -> String {
+        return originalObject!.tellMeAboutYourSelf()
+    }
+}
+
+
+class AgeDecoration: ObjectDecorator {
+
+    var age: String = "1"
+
+    required init(object: CoreObject) {
+        super.init(object: object)
+    }
+
+    override func tellMeAboutYourSelf() -> String {
+        return originalObject!.tellMeAboutYourSelf()
+        //return originalObject!.tellMeAboutYourSelf() + ", my age is \(age)"
+    }
+}
+
+class ColorDecoration: ObjectDecorator {
+    var color: String = "Green"
+
+    required init(object: CoreObject) {
+        super.init(object: object)
+    }
+
+    override func tellMeAboutYourSelf() -> String {
+        return originalObject!.tellMeAboutYourSelf()
+    }
+}
+
+
+
