@@ -10,7 +10,7 @@ import XCTest
 @testable import DesignPatterns
 
 class DecoratorTestCases: XCTestCase {
-    var coreObject: CoreObject?
+
     var decoratedObject: CoreFunction?
 
     override func setUp() {
@@ -25,11 +25,39 @@ class DecoratorTestCases: XCTestCase {
 
     func testCoreObject() {
         // When
-        coreObject = CoreObject()
+        decoratedObject = CoreObject()
         // Given
-        let identify = coreObject?.tellMeAboutYourSelf()
+        let identify = decoratedObject?.tellMeAboutYourSelf()
         // Then
         XCTAssert(identify == "CoreObject", "You failed to say your name")
     }
-    
+
+
+    func testAgeDecoratedObject() {
+        // When
+        decoratedObject = AgeDecoration(object: CoreObject())
+        // Given
+        let identity = decoratedObject?.tellMeAboutYourSelf()
+        // Then
+        XCTAssert(identity == "CoreObject, my age is 1" , "Your decorated object is wrong")
+    }
+
+
+    func testColorDecoratedObject() {
+        // When
+        decoratedObject = ColorDecoration(object: CoreObject())
+        // Given
+        let identity = decoratedObject?.tellMeAboutYourSelf()
+        // Then
+        XCTAssert(identity == "CoreObject, my color is green")
+    }
+
+    func testColorAndAgeDecoration() {
+        // When
+        decoratedObject = ColorDecoration(object: AgeDecoration(object: CoreObject()))
+        // Given
+        let identity = decoratedObject?.tellMeAboutYourSelf()
+        // Then 
+        XCTAssert(identity == "CoreObject, my age is 1, my color is green")
+    }
 }
