@@ -18,6 +18,8 @@
 		A727232B1E54DF5C00834B35 /* SimpleSystemA.swift in Sources */ = {isa = PBXBuildFile; fileRef = A727232A1E54DF5C00834B35 /* SimpleSystemA.swift */; };
 		A727232E1E54DF8F00834B35 /* SimpleSystemB.swift in Sources */ = {isa = PBXBuildFile; fileRef = A727232D1E54DF8F00834B35 /* SimpleSystemB.swift */; };
 		A72723301E54DFAB00834B35 /* ComplexSystemC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A727232F1E54DFAB00834B35 /* ComplexSystemC.swift */; };
+		A72723421E5636D200834B35 /* CoreObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72723411E5636D200834B35 /* CoreObject.swift */; };
+		A72723451E563F4100834B35 /* DecoratorTestCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72723441E563F4000834B35 /* DecoratorTestCases.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		A727232D1E54DF8F00834B35 /* SimpleSystemB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleSystemB.swift; sourceTree = "<group>"; };
 		A727232F1E54DFAB00834B35 /* ComplexSystemC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComplexSystemC.swift; sourceTree = "<group>"; };
 		A72723351E55261400834B35 /* NewUnitTestTarget.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewUnitTestTarget.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A72723411E5636D200834B35 /* CoreObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreObject.swift; sourceTree = "<group>"; };
+		A72723441E563F4000834B35 /* DecoratorTestCases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecoratorTestCases.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +127,7 @@
 			children = (
 				A72722FA1E54DE9E00834B35 /* AppDelegate.swift */,
 				A72722FC1E54DE9E00834B35 /* ViewController.swift */,
+				A72723431E56371E00834B35 /* Decorator Pattern */,
 				A727232C1E54DF6300834B35 /* Facade Pattern */,
 				A72722FE1E54DE9E00834B35 /* Main.storyboard */,
 				A72723011E54DE9E00834B35 /* Assets.xcassets */,
@@ -135,6 +140,7 @@
 		A727230E1E54DE9E00834B35 /* DesignPatternsTests */ = {
 			isa = PBXGroup;
 			children = (
+				A72723441E563F4000834B35 /* DecoratorTestCases.swift */,
 				A727230F1E54DE9E00834B35 /* DesignPatternsTests.swift */,
 				A72723111E54DE9E00834B35 /* Info.plist */,
 			);
@@ -159,6 +165,14 @@
 				A727232F1E54DFAB00834B35 /* ComplexSystemC.swift */,
 			);
 			name = "Facade Pattern";
+			sourceTree = "<group>";
+		};
+		A72723431E56371E00834B35 /* Decorator Pattern */ = {
+			isa = PBXGroup;
+			children = (
+				A72723411E5636D200834B35 /* CoreObject.swift */,
+			);
+			name = "Decorator Pattern";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,6 +346,7 @@
 			files = (
 				A72722FD1E54DE9E00834B35 /* ViewController.swift in Sources */,
 				A727232B1E54DF5C00834B35 /* SimpleSystemA.swift in Sources */,
+				A72723421E5636D200834B35 /* CoreObject.swift in Sources */,
 				A72723291E54DF1D00834B35 /* Facade.swift in Sources */,
 				A72723301E54DFAB00834B35 /* ComplexSystemC.swift in Sources */,
 				A727232E1E54DF8F00834B35 /* SimpleSystemB.swift in Sources */,
@@ -344,6 +359,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A72723101E54DE9E00834B35 /* DesignPatternsTests.swift in Sources */,
+				A72723451E563F4100834B35 /* DecoratorTestCases.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
