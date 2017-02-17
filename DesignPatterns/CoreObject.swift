@@ -51,12 +51,12 @@ class AgeDecoration: ObjectDecorator {
     }
 
     override func tellMeAboutYourSelf() -> String {
-        return originalObject!.tellMeAboutYourSelf()
-        //return originalObject!.tellMeAboutYourSelf() + ", my age is \(age)"
+        return originalObject!.tellMeAboutYourSelf() + ", my age is \(age)"
     }
 }
 
 class ColorDecoration: ObjectDecorator {
+
     var color: String = "Green"
 
     required init(object: CoreFunction) {
@@ -64,7 +64,7 @@ class ColorDecoration: ObjectDecorator {
     }
 
     override func tellMeAboutYourSelf() -> String {
-        return originalObject!.tellMeAboutYourSelf()
+        return originalObject!.tellMeAboutYourSelf() + ", my color is \(color)"
     }
 }
 

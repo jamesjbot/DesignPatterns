@@ -20,6 +20,7 @@
 		A72723301E54DFAB00834B35 /* ComplexSystemC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A727232F1E54DFAB00834B35 /* ComplexSystemC.swift */; };
 		A72723421E5636D200834B35 /* CoreObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72723411E5636D200834B35 /* CoreObject.swift */; };
 		A72723451E563F4100834B35 /* DecoratorTestCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72723441E563F4000834B35 /* DecoratorTestCases.swift */; };
+		A77766811E5773E900BA74B7 /* Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77766801E5773E900BA74B7 /* Component.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		A72723351E55261400834B35 /* NewUnitTestTarget.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewUnitTestTarget.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A72723411E5636D200834B35 /* CoreObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreObject.swift; sourceTree = "<group>"; };
 		A72723441E563F4000834B35 /* DecoratorTestCases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecoratorTestCases.swift; sourceTree = "<group>"; };
+		A77766801E5773E900BA74B7 /* Component.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Component.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 			children = (
 				A72722FA1E54DE9E00834B35 /* AppDelegate.swift */,
 				A72722FC1E54DE9E00834B35 /* ViewController.swift */,
+				A77766821E5773F400BA74B7 /* Composite */,
 				A72723431E56371E00834B35 /* Decorator Pattern */,
 				A727232C1E54DF6300834B35 /* Facade Pattern */,
 				A72722FE1E54DE9E00834B35 /* Main.storyboard */,
@@ -173,6 +176,14 @@
 				A72723411E5636D200834B35 /* CoreObject.swift */,
 			);
 			name = "Decorator Pattern";
+			sourceTree = "<group>";
+		};
+		A77766821E5773F400BA74B7 /* Composite */ = {
+			isa = PBXGroup;
+			children = (
+				A77766801E5773E900BA74B7 /* Component.swift */,
+			);
+			name = Composite;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -349,6 +360,7 @@
 				A72723421E5636D200834B35 /* CoreObject.swift in Sources */,
 				A72723291E54DF1D00834B35 /* Facade.swift in Sources */,
 				A72723301E54DFAB00834B35 /* ComplexSystemC.swift in Sources */,
+				A77766811E5773E900BA74B7 /* Component.swift in Sources */,
 				A727232E1E54DF8F00834B35 /* SimpleSystemB.swift in Sources */,
 				A72722FB1E54DE9E00834B35 /* AppDelegate.swift in Sources */,
 			);
@@ -642,6 +654,7 @@
 				A72723211E54DE9E00834B35 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A72723221E54DE9E00834B35 /* Build configuration list for PBXNativeTarget "DesignPatternsTests" */ = {
 			isa = XCConfigurationList;
@@ -650,6 +663,7 @@
 				A72723241E54DE9E00834B35 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A72723251E54DE9E00834B35 /* Build configuration list for PBXNativeTarget "DesignPatternsUITests" */ = {
 			isa = XCConfigurationList;
@@ -658,6 +672,7 @@
 				A72723271E54DE9E00834B35 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A727233C1E55261400834B35 /* Build configuration list for PBXNativeTarget "NewUnitTestTarget" */ = {
 			isa = XCConfigurationList;
@@ -666,6 +681,7 @@
 				A727233E1E55261400834B35 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
