@@ -49,7 +49,7 @@ class DecoratorTestCases: XCTestCase {
         // Given
         let identity = decoratedObject?.tellMeAboutYourSelf()
         // Then
-        XCTAssert(identity == "CoreObject, my color is green")
+        XCTAssert(identity == "CoreObject, my color is Green","\(identity)")
     }
 
     func testColorAndAgeDecoration() {
@@ -58,6 +58,15 @@ class DecoratorTestCases: XCTestCase {
         // Given
         let identity = decoratedObject?.tellMeAboutYourSelf()
         // Then 
-        XCTAssert(identity == "CoreObject, my age is 1, my color is green")
+        XCTAssert(identity == "CoreObject, my age is 1, my color is Green","\(identity)")
+    }
+
+    func testAgeThenColorDecoration() {
+        // When
+        decoratedObject = AgeDecoration(object: ColorDecoration(object: CoreObject()))
+        // Given
+        let identity = decoratedObject?.tellMeAboutYourSelf()
+        // Then
+        XCTAssert(identity == "CoreObject, my color is Green, my age is 1","\(identity)")
     }
 }
