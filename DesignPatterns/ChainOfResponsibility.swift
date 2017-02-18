@@ -23,39 +23,54 @@ protocol Handler {
 class SpecificHandler: Handler {
     var successor: Handler?
     var name: String?
+
     init(_ inname: String) {
         name = inname
         successor = nil
     }
 
     func handleProblem(problem: ProblemType) -> String {
-        return ""
+        if problem == .Specific {
+            return name ?? ""
+        } else {
+            return successor?.handleProblem(problem: problem) ?? ""
+        }
     }
 }
 
 class LessSpecificHandler: Handler {
     var successor: Handler?
     var name: String?
+
     init(_ inname: String) {
         name = inname
         successor = nil
     }
 
     func handleProblem(problem: ProblemType) -> String {
-        return ""
+        if problem == .LessSpecific {
+            return name ?? ""
+        } else {
+            return successor?.handleProblem(problem: problem) ?? ""
+        }
     }
 }
 
 class GeneralHandler: Handler {
     var successor: Handler?
     var name: String?
+
     init(_ inname: String) {
         name = inname
         successor = nil
     }
 
     func handleProblem(problem: ProblemType) -> String {
-        return ""
+        if problem == .General {
+            return name ?? ""
+        } else {
+            return successor?.handleProblem(problem: problem) ?? ""
+        }
     }
 }
 
