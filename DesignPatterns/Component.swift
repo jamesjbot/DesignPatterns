@@ -14,20 +14,26 @@ protocol Movable {
 }
 
 protocol Component {
+    var name: String? { get set }
     func add(component: Component)
-    func remove(component: Component)
+    func remove(at: NSInteger)
     func child(at: NSInteger) -> Component?
 }
 
 class Composite: Component {
-
+    var name: String?
     var children: [Component] = []
 
-    internal func child(at: NSInteger) -> Component? {
-        return nil
+    init(inname: String){
+        name = inname
     }
 
-    internal func remove(component: Component) {
+    internal func child(at: NSInteger) -> Component? {
+        return children[at]
+    }
+
+    internal func remove(at: NSInteger) {
+        children.remove(at: at)
     }
 
     internal func add(component: Component) {
@@ -38,16 +44,24 @@ class Composite: Component {
 }
 
 class Leaf: Component, Movable {
+    var name: String?
     internal var position: NSInteger = 0
 
+    init(inname: String) {
+        name = inname
+    }
+
     internal func child(at: NSInteger) -> Component? {
+        // This should do nothing
         return nil
     }
 
-    internal func remove(component: Component) {
+    internal func remove(at: NSInteger) {
+        // This should do nothing
     }
 
     internal func add(component: Component) {
+        // This should do nothing
     }
 
     internal func move(distance: NSInteger) {
