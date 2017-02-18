@@ -18,6 +18,7 @@ protocol Component {
     func add(component: Component)
     func remove(at: NSInteger)
     func child(at: NSInteger) -> Component?
+    func delineateChildren() -> String
 }
 
 class Composite: Component {
@@ -40,6 +41,14 @@ class Composite: Component {
         children.append(component)
     }
 
+    func delineateChildren() -> String {
+        var retval: String?
+        retval = name!
+        for i in children {
+                retval?.append(", \(i.delineateChildren())")
+        }
+        return retval ?? ""
+    }
 
 }
 
@@ -66,6 +75,10 @@ class Leaf: Component, Movable {
 
     internal func move(distance: NSInteger) {
         position += distance
+    }
+
+    internal func delineateChildren() -> String {
+        return name!
     }
 
 
