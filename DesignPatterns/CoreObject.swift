@@ -8,10 +8,16 @@
 
 import Foundation
 
-// The decorator pattern adds additional responsibilites to an object
-// dynamically. This is an alternative to subclassing for extending
-// functionality.
+/* 
+ The decorator pattern adds additional responsibilites to an object
+ dynamically. This is an alternative to subclassing for extending
+ functionality. The following is the classic interpretation of decorator
+ pattern.
+ 
+ In Swift, protocol extensions are the decoration pattern of choice.
+ We can add functionality to a type by just adding an extension.
 
+*/
 protocol CoreFunction {
     func tellMeAboutYourSelf() -> String
 }
