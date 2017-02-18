@@ -24,7 +24,7 @@ class Composite: Component {
     var name: String?
     var children: [Component] = []
 
-    init(inname: String){
+    init(_ inname: String){
         name = inname
     }
 
@@ -47,7 +47,7 @@ class Leaf: Component, Movable {
     var name: String?
     internal var position: NSInteger = 0
 
-    init(inname: String) {
+    init(_ inname: String) {
         name = inname
     }
 
