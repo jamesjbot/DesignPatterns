@@ -21,6 +21,7 @@
 		A72723421E5636D200834B35 /* CoreObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72723411E5636D200834B35 /* CoreObject.swift */; };
 		A72723451E563F4100834B35 /* DecoratorTestCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72723441E563F4000834B35 /* DecoratorTestCases.swift */; };
 		A77766811E5773E900BA74B7 /* Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77766801E5773E900BA74B7 /* Component.swift */; };
+		A7B46EBF1E57F8E4006D2542 /* CompositePatternTestCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B46EBE1E57F8E4006D2542 /* CompositePatternTestCases.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		A72723411E5636D200834B35 /* CoreObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreObject.swift; sourceTree = "<group>"; };
 		A72723441E563F4000834B35 /* DecoratorTestCases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecoratorTestCases.swift; sourceTree = "<group>"; };
 		A77766801E5773E900BA74B7 /* Component.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Component.swift; sourceTree = "<group>"; };
+		A7B46EBE1E57F8E4006D2542 /* CompositePatternTestCases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompositePatternTestCases.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 		A727230E1E54DE9E00834B35 /* DesignPatternsTests */ = {
 			isa = PBXGroup;
 			children = (
+				A7B46EBE1E57F8E4006D2542 /* CompositePatternTestCases.swift */,
 				A72723441E563F4000834B35 /* DecoratorTestCases.swift */,
 				A727230F1E54DE9E00834B35 /* DesignPatternsTests.swift */,
 				A72723111E54DE9E00834B35 /* Info.plist */,
@@ -370,6 +373,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7B46EBF1E57F8E4006D2542 /* CompositePatternTestCases.swift in Sources */,
 				A72723101E54DE9E00834B35 /* DesignPatternsTests.swift in Sources */,
 				A72723451E563F4100834B35 /* DecoratorTestCases.swift in Sources */,
 			);
